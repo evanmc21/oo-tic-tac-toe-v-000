@@ -44,3 +44,5 @@ def position_taken?(index)
  else
    true
  end
+end
+end
