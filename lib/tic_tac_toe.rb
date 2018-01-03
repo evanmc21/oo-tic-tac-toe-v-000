@@ -26,6 +26,14 @@ def input_to_index(input)
   input.to_i - 1
 end
 
+def turn_count
+  @board.count{|token| token == "X" || token == "O"}
+end
+
+def current_player(board)
+   turn_count(board) % 2 == 0 ? "X" : "O"
+end
+
 def move(index, current_player = "X")
   @board[index] = current_player
 end
