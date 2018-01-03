@@ -62,14 +62,18 @@ else
 end
 end
 
-def turn_count
-counter = 0
-@board.each do |turn|
-  if turn == "X" || turn == "O"
-    counter += 1
-  end
-end
-return counter
-end
+def won?
+  WIN_COMBINATIONS.each do |win_combination|
+    index0 = win_combination[0]
+    index1 = win_combination[1]
+    index2 = win_combination[2]
+
+     if @board[index0] == "X" && @board[index1] == "X" && @board[index2] == "X"
+   return win_combination
+ elsif @board[index0] == "O" && @board[index1] == "O" && @board[index2] == "O"
+   return win_combination
+ end
+ end
+   return nil
 
 end
