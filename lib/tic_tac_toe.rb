@@ -76,4 +76,9 @@ def won?
  end
    return nil
 end
+
+def full?
+@board.none?{|index| index == "" || index == " " || index == nil}
+end
+
 end
