@@ -93,4 +93,25 @@ else
 end
 end
 
+def winner
+  if won?
+    @board[won?[0]]
+  end
+end
+
+def play
+while !over?
+  turn
+end
+
+   if  winner == "X" && winner != "O"
+     puts "Congratulations X!"
+   elsif winner == "O"
+     puts "Congratulations O!"
+   elsif draw?
+     puts "Cat's Game!"
+   end
+end
+
+
 end
