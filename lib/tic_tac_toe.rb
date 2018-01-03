@@ -81,4 +81,8 @@ def full?
 @board.none?{|index| index == "" || index == " " || index == nil}
 end
 
+def draw?
+!won? && full?
+end
+
 end
