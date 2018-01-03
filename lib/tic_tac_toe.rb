@@ -45,4 +45,8 @@ def position_taken?(index)
    true
  end
 end
+
+def valid_move?(index)
+ !(position_taken?(index) || index > 8 || index < 0)
+end
 end
